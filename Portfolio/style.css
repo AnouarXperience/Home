@@ -960,86 +960,60 @@ h1 {
 }
 
 /* Section Parallax */
+/* Section Parallax */
 .section-parallax {
     background: url(ressources/accueil.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center right; /* Adjusted background position */
-    height: 80vh; /* Adjusted height */
-    min-height: 500px; /* Adjusted min-height */
+    background-position: center right;
+    height: 80vh;
+    min-height: 500px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    width: calc(100% - 300px);
-    margin-left: auto;
+    width: 100%;
+    margin: 0 auto;
     position: relative;
     background-attachment: fixed;
 }
+
 .txt-par {
     font-size: 30px;
     font-weight: bold;
     margin: 20px;
     text-align: center;
-    opacity: 0; /* Initially hide the text */
-    transform: translateY(50%); /* Center vertically */
+    opacity: 0;
+    transform: translateY(50%);
 }
-/* @media screen and (max-width: 1300px) {
+/* Add this CSS rule to push the text to the right on web view */
+@media screen and (min-width: 551px) {
+    .txt-par {
+        margin-left: 325px; /* Adjust the margin as needed */
+    }
+}
+@media screen and (max-width: 1300px) {
     .txt-par {
         font-size: 25px;
+        margin: 0 30px;
     }
 }
 
 @media screen and (max-width: 700px) {
     .txt-par {
         font-size: 22px;
+        margin: 0 25px;
     }
 }
 
 @media screen and (max-width: 550px) {
-    .section-parallax {
-        flex-direction: column;
-    }
-
     .txt-par {
         font-size: 20px;
         margin: 20px 0;
     }
-} */
-
-/* .txt-par:nth-child(1){
-    padding-left: 300px;
-} */
-
-@media screen and (max-width: 1300px) {
-    .txt-par {
-        font-size: 25px;
-        margin: 0 30px;
-    }
-    .txt-par:nth-child(1) {
-        padding-left: 0px;
-    }
-    
 }
-@media screen and (max-width: 700px) {
 
-.txt-par {
-    font-size: 22px;
-    margin: 0 25px;
-}
-}
-@media screen and (max-width: 550px) {
-
-    .section-parallax {
-        flex-direction: column;
-    }
-    .txt-par {
-        font-size: 20px;
-        margin: 20px 0px;
-    }
-
-}
 /* Animation */
 .animate {
     animation: fadeInUp 1s ease-out forwards;
@@ -1183,3 +1157,48 @@ footer {
         padding-left: 0px;
     }
 }
+
+
+/* Scroll to Top Button Styles */
+.arrow-up {
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 0 0 0 #333;
+    background: #333;
+    animation: pulse 1.3s infinite;
+}
+
+.arrow-up:hover {
+    background: #555;
+}
+
+.arrow-up .arrow-icon {
+    width: 25px;
+    height: 25px;
+    background: url('ressources/arrowUp.svg') no-repeat center center;
+    background-size: contain;
+    transform: rotate(0deg); /* Ensure the arrow points up */
+    filter: invert(1);
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(51, 51, 51, 0.7);
+    }
+    70% {
+        box-shadow: 0 0 0 12px rgba(51, 51, 51, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(51, 51, 51, 0);
+    }
+}
+
+
