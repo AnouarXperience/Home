@@ -1,108 +1,111 @@
-*, ::before, ::after {
+*,
+::before,
+::after {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
 body {
-    background: #333;
-    font-family: Arial, Helvetica, sans-serif;
-    height: 100vh;
-    background: url('ressources/SoftwareEngineer.jpg');
-    background-repeat: no-repeat;
+    background: #333 url('ressources/SoftwareEngineer.jpg') no-repeat center center fixed;
     background-size: cover;
+    font-family: 'Arial', 'Helvetica', sans-serif;
+    height: 100vh;
     position: relative;
     overflow-x: hidden;
 }
 
 .container-first {
     position: absolute;
-    top: 30%;
-    left: 5%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
 }
 
 h1 {
     text-transform: uppercase;
-    font-size: 110px;
+    font-size: 4vw;
     color: #f1f1f1;
-    font-family: Abril fatface, sans-serif;
-    animation: colorChange 2s infinite alternate; /* Apply the animation named colorChange with a duration of 2 seconds, set to run infinitely, and alternate */
+    font-family: 'Abril Fatface', sans-serif;
+    animation: colorChange 2s infinite alternate;
 }
+
 @keyframes colorChange {
-    0% {
-        color: #f1f1f1; /* Start color */
+    0%, 100% {
+        color: #f1f1f1;
     }
     50% {
-        color: #ff9900; /* Midpoint color */
+        color: #ff9900;
     }
-    100% {
-        color: #f1f1f1; /* End color */
-    }}
-h1 span {
-    position: relative;
 }
+
 .container-btns {
-    position: relative;
-    top: 50px;
+    margin-top: 20px;
 }
+
 .btn-first {
     border: 2px solid #f1f1f1;
     outline: none;
     background: transparent;
-    font-size: 30px;
-    padding: 20px;
-    width: 300px;
+    font-size: 2vw;
+    padding: 1.5vw 2vw;
     color: #f1f1f1;
     cursor: pointer;
+    text-decoration: none;
 }
-.btn-first:nth-child(1){
-    margin-right: 30px;
+
+.btn-first:not(:last-child) {
+    margin-right: 2vw;
 }
+
 .btn-first:hover {
     transition: all 0.3s ease-in-out;
     background: #f1f1f1;
     color: #333;
 }
+
 .lignes {
     position: absolute;
     top: 6%;
     left: 5%;
 }
+
 .l1 {
-    width: 250px;
-    height: 3px;
+    width: 15vw;
+    height: 1px;
     background: #f1f1f1;
     border-radius: 5px;
 }
+
 .l2 {
-    width: 140px;
-    height: 3px;
+    width: 8vw;
+    height: 1px;
     background: #f1f1f1;
     border-radius: 5px;
     position: relative;
-    top: 20px;
+    top: 1vh;
 }
 
 .logo {
     position: absolute;
-    right: 2.9%;
-    top: 4%;
-    width: 95px;
-    height: 80px;
+    right: 3vw;
+    top: 4vh;
+    width: 10vw;
+    height: auto;
     cursor: pointer;
-    filter: opacity(70%);
-    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
-    filter: grayscale(100%);
+    filter: opacity(70%) grayscale(100%);
+    transition: filter 0.3s ease-in-out;
 }
 
-.logo:hover {   
-    filter: opacity(100%) grayscale(0%); /* Remove opacity and grayscale on hover */
+.logo:hover {
+    filter: opacity(100%) grayscale(0%);
 }
 
 .medias {
     list-style-type: none;
     position: absolute;
-    right: 3.3%;
+    right: 3vw;
     top: 50%;
     transform: translateY(-50%);
     display: flex;
@@ -111,31 +114,26 @@ h1 span {
     flex-direction: column;
 }
 
-    /*transform: scale(1.1); /* Scale the logo on hover */
-    /*filter: opacity(100%); /* Remove opacity on hover */
-    
-
-
 .bulle {
-    width: 60px;
-    height: 60px;
+    width: 6vw;
+    height: 6vw;
     border-radius: 50%;
     border: 1px solid #f1f1f1;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 10px 0;
+    margin: 1vw 0;
     background: #f1f1f1;
     cursor: pointer;
     position: relative;
-    transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
-}
-.bulle:hover {
-    transform: scale(1.5); /* Apply the zoom effect on hover */
+    transition: transform 0.3s ease-in-out;
 }
 
+.bulle:hover {
+    transform: scale(1.5);
+}
 
 .logo-medias {
-    width: 40px;
-    height: 40px;
+    width: 4vw;
+    height: auto;
 }
