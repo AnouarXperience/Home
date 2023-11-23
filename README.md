@@ -42,4 +42,4 @@ Follow these instructions to set up a local copy of MyPortfolio.
 
 This project is licensed under the MIT License.
 
-Thank you for visiting MyPortfolio! If you have any questions or feedback, feel free to get in touch.(https://github.com/AnouarXperience/Home.git)
+Thank you for visiting MyPortfolio! If you have any questions or feedback, feel free to get in touch.(https://anouarxperience.github.io/Home/)
