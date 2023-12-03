@@ -68,7 +68,7 @@ for(let i = 0; i < input_fields.length; i++) {
 
 }
 
-// Anim GSAP + ScrollMagic
+// Anim myportfolio + ScrollMagic
 
 const navbar = document.querySelector('.nav-gauche');
 const titre = document.querySelector('h1');
@@ -90,7 +90,7 @@ window.addEventListener('load', () => {
     TL1.play();
 })
 
-// Animation ScrollMagic GSAP presentation
+// Animation ScrollMagic myportfolio presentation
 
 const presentationContainer = document.querySelector('.presentation')
 const titrePres = document.querySelector('.titre-pres');
@@ -222,6 +222,51 @@ function topFunction() {
     document.body.scrollTop = 0; // For Safari
     document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE, and Opera
 }
+
+// function showAlert() {
+//     alert("I can currently provide the work, but I'll make an effort to contact the company I interned with to explore the possibility of sharing more code publicly. As it stands, the project is private due to its nature as an internship project for the end of the year. I hope to offer more in the future to contribute to your career growth.");
+//   }
+
+function showAlert() {
+    var message = "I can't currently provide the work, but I'll make an effort to contact the company I interned with to explore the possibility of sharing more code publicly. As it stands, the project is private due to its nature as an internship project for the end of the year. I hope to offer more in the future to contribute to your career growth.";
+
+    // Create a div for the overlay
+    var overlay = document.createElement('div');
+    overlay.style.position = 'fixed';
+    overlay.style.top = '0';
+    overlay.style.left = '0';
+    overlay.style.width = '100%';
+    overlay.style.height = '100%';
+    overlay.style.backgroundColor = 'rgba(0, 0, 0, 0.5)';
+    overlay.style.display = 'flex';
+    overlay.style.justifyContent = 'center';
+    overlay.style.alignItems = 'center';
+
+    // Create a div for the message box
+    var messageBox = document.createElement('div');
+    messageBox.style.background = '#fff';
+    messageBox.style.padding = '20px';
+    messageBox.style.borderRadius = '8px';
+    messageBox.style.boxShadow = '0 0 10px rgba(0, 0, 0, 0.3)';
+    messageBox.style.textAlign = 'justify';
+    messageBox.style.maxWidth = '400px';
+
+    // Set the message content
+    messageBox.innerHTML = message;
+
+    // Append the message box to the overlay
+    overlay.appendChild(messageBox);
+
+    // Append the overlay to the body
+    document.body.appendChild(overlay);
+
+    // Add event listener to close the overlay when clicked outside the message box
+    overlay.addEventListener('click', function (event) {
+        if (event.target === overlay) {
+            document.body.removeChild(overlay);
+        }
+    });
+  }
 
 // This function will be called each time the timeline completes
 // function repeatAnimation() {
