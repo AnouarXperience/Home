@@ -67,7 +67,7 @@ body {
 .cercle-portrait {
     margin: 20px 0;
     width: 150px;
-    height: 150px;
+    height: 160px;
     border-radius: 50%;
     position: relative;
     box-shadow: 26px 26px 53px #292929,
@@ -93,11 +93,11 @@ body {
     height: 100px;
     border-radius: 50%;
     position: absolute;
-    bottom: 40px;
+    bottom: 140px;
     cursor: pointer;
 }
 .logo-cercle img {
-    width: 70px;
+    width: 50px;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -685,140 +685,123 @@ h1 {
     }
 
 }
-/*--------- Section Range -------------- */
-
+/* ======= Section Range ======= */
 .section-range {
     width: 100%;
-    height: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    padding-bottom: 200px;
-    border-bottom: 1px dashed #333;
-    background: #485563;
-    background-image: linear-gradient(to right, #29323c, #485563);
+    padding: 80px 20px 200px;
+    background: linear-gradient(to right, #29323c, #485563);
     color: #f1f1f1;
-    position: relative;
-    z-index: -1;
-}
-.range-cont {
-    position: relative;
-}
-.titre-exp {
-    font-size: 40px;
     text-align: center;
-    margin: 80px 0 90px 0;
-    padding-left: 300px;
-}
-.grille-skill {
+  }
+  
+  /* Section Title */
+  .titre-exp {
+    font-size: 40px;
+    margin: 40px 0 90px 0;
+    padding-left: 300px;  /* Added offset to match old design */
+    text-align: center;   /* Ensures the title text remains centered */
+  }
+  
+  /* ======= Grid Container ======= */
+  .grille-skill {
     display: grid;
-    grid-template: repeat(3,80px) / repeat(2, 500px);
-    grid-gap: 50px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    /* For larger screens: offset the grid as in the old design */
     padding-left: 300px;
-}
-.barre-skill {
-    height: 15px;
-    background: rgb(167,146,243);
-    border-radius: 5px;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-}
-.barre-grises {
-    position: absolute;
-    z-index: -1;
-    left: 0;
-    bottom: 0;
-    width: 500px;
-    height: 15px;
-    background: rgb(216,216,216);
-    border-radius: 5px;
-}
-.b1 {
-    width: 75%;
-}
-.b2 {
-    width: 35%;
-    background: rgb(243,237,146);
-}
-.b3 {
-    width: 30%;
-    background: rgb(243,237,146);
-}
-.b4 {
-    width: 40%;
-}
-.b5 {
-    width: 60%;
-}
-.b6 {
-    width: 80%;
-    background: rgb(243,237,146);
-}
-.label-skill {
+    text-align: left;
+  }
+  
+  /* ======= Skill Card (Range Container) ======= */
+  .range-cont {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 8px;
+    text-align: left;
+    transition: transform 0.3s;
+  }
+  
+  .range-cont:hover {
+    transform: translateY(-5px);
+  }
+  
+  /* ======= Skill Header (Icon + Label) ======= */
+  .skill-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  
+  /* Skill Icon Styling */
+  .skill-icon {
+    width: 24px;
+    height: 24px;
+    filter: brightness(0) saturate(100%) invert(25%) sepia(90%) saturate(2000%) hue-rotate(200deg);
+    animation: float 3s ease-in-out infinite;
+  }
+  
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+  }
+  
+  /* Skill Label */
+  .label-skill {
     font-size: 24px;
-}
-/* Medias Range */
-
-@media screen and (max-width: 1400px) {
-    .grille-skill{
-        grid-template: repeat(3,80px) / repeat(2,450px);
-    }
-    .barre-grises {
-        width: 450px;
-    }
-}
-
-@media screen and (max-width: 1300px) {
-
-    .section-range {
-        padding-left: 0;
-    }
+    font-weight: bold;
+  }
+  
+  /* Skill Description Text */
+  .number-skill {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  
+  /* Optional: Style Links inside paragraphs */
+  .number-skill a {
+    color: #a7a6f3;
+    text-decoration: underline;
+  }
+  
+  /* ======= Responsive Adjustments ======= */
+  
+  /* For screens smaller than 1300px, remove the left offset so content centers nicely */
+  @media screen and (max-width: 1300px) {
     .titre-exp {
         padding-left: 0;
-    }
+        text-align: center;
+      }
     .grille-skill {
-        grid-template: repeat(6,80px) / 600px;
-        padding-left: 0;
+      padding-left: 0;
+      text-align: center;
     }
-    .barre-grises {
-        width: 600px;
-    }
-
-}
-
-@media screen and (max-width: 700px) {
-
-    .grille-skill {
-        grid-template: repeat(6,80px) / 400px;
-    }
-    .barre-grises {
-        width: 400px
-    }
-
-}
-@media screen and (max-width: 450px) {
-
-    .section-range{
-        padding-bottom: 100px;
-    }
+  }
+  
+  @media screen and (max-width: 768px) {
     .titre-exp {
-        font-size: 30px;
-        margin: 50px 0 60px 0;
+      font-size: 32px;
     }
     .label-skill {
-        font-size: 20px;
+      font-size: 20px;
     }
-    .grille-skill{
-        grid-template: repeat(6,80px) / 300px;
-        grid-gap: 40px;
+    .number-skill {
+      font-size: 14px;
     }
-    .barre-grises {
-        width: 300px;
+  }
+  
+  @media screen and (max-width: 450px) {
+    .section-range {
+      padding: 60px 10px 120px;
     }
-}
-
+    .titre-exp {
+      font-size: 28px;
+      margin-bottom: 30px;
+    }
+  }
+  
 /*------------ Section experience travail --------- */
 
 .travail-exp {
@@ -867,6 +850,7 @@ h1 {
 .flex-cont-bloc-exp {
     width: 800px;
     flex-shrink: 1;
+    flex-wrap: wrap; /* Allow blocks to wrap on smaller screens */
     height: 1000px;
     position: relative;
 }
@@ -907,6 +891,9 @@ h1 {
 .bloc4 {
     background: #d0e2ec;
 }
+/* .bloc5 {
+    background: #b9dbee;
+} */
 .titre-section-bloc {
     font-family: 'Abril Fatface', sans-serif;
     font-size: 25px;
@@ -934,6 +921,9 @@ h1 {
     .flex-cont-bloc-exp {
         margin-right: 30px;
     }
+    .contenu-bloc {
+        padding: 10px; /* Reduce padding for smaller screens */
+    }
 
 }
 
@@ -943,12 +933,15 @@ h1 {
         font-size: 16px;
     }
     .bloc {
-        height: 400px;
+        /* height: 400px; */
+        height: auto; /* Ensure the blocks are flexible */
     }
     .barre-verticale {
         height: 1800px;
     }
-
+    .contenu-bloc {
+        padding: 5px; /* Even less padding for very small screens */
+    }
 }
 
 @media screen and (max-width: 380px) {
@@ -956,7 +949,10 @@ h1 {
         .txt-section {
             font-size: 15px;
         }
-
+        .bloc {
+            height: auto; /* Ensure the blocks are flexible */
+            margin-bottom: 10px; /* Even smaller margin for very small screens */
+        }
 }
 
 /* Section Parallax */
@@ -977,6 +973,7 @@ h1 {
     margin: 0 auto;
     position: relative;
     background-attachment: fixed;
+    margin-top: 100px;
 }
 
 .txt-par {

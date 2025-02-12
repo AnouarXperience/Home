@@ -30,25 +30,23 @@ let typewriter = new Typewriter(txtAnim,  {
     deleteSpeed: 20
 })
 
-typewriter 
-.pauseFor(1800)
+// Update the typewriter animation to reflect Software Engineering focus
+typewriter
+.pauseFor(1000)
 .changeDelay(20)
-.typeString('I am Abdallah Anouar')
+.typeString('I am <strong>Anouar Abdallah</strong>')
 .pauseFor(300)
-.typeString('<strong>, Full-Stack Developer</strong> !')
+.typeString('<span style="color: #27ae60;">, Software Engineer</span> 👨💻')
 .pauseFor(1000)
-.deleteChars(12)
-.typeString('<span style="color: #27ae60;"> Java</span> !')
+.deleteChars(24)
+.typeString('<span style="color: #EA39ff;">, Fullstack Developer</span> 🌐')
 .pauseFor(1000)
-.deleteChars(6)
-.typeString('<span style="color: #EA39ff;"> Spring Boot</span> !')
+.deleteChars(25)
+.typeString('<span style="color: midnightblue;">, AI Enthusiast</span> 🤖')
 .pauseFor(1000)
-.deleteChars(13)
-.typeString('<span style="color: midnightblue;"> React</span> !')
-.pauseFor(1000)
-.deleteChars(7)
-.typeString('<span style="color: #ff6910;"> JavaScript</span> !')
-.start()
+.deleteChars(18)
+.typeString('<span style="color: #ff6910;">, Tech Explorer</span> 🚀')
+.start();
 
 // Animation Contact
 

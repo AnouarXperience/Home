@@ -3,9 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
+    <title>Portfolio - Anouar</title>
+    <meta name="description" content="Explore Anouar's projects and skills in software development.">
+    
+    <!-- Open Graph Metadata -->
+    <meta property="og:title" content="Portfolio - Anouar">
+    <meta property="og:description" content="Explore Anouar's projects and skills in software development.">
+    <meta property="og:image" content="./ressources/PhotoShop_myPortfolio.jpeg">
+    <meta property="og:url" content="http://portfolio.lovestoblog.com/portfolio">
+    <meta property="og:type" content="website">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="../ressources/personal-website-icon-logo-vector-illustration-portfolio_Business_Face.ico" type="image/x-icon">
+    
+    <!-- Stylesheets -->
+    <!-- <link rel="stylesheet" href="./bootstrap.css"> -->
+    <link rel="stylesheet" href="./loader.css"> 
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Poppins&display=swap" rel="stylesheet">
+    	<!--JS-->
+    <!-- <script src="./bootstrap.min.js"></script> -->
 </head>
 <body>
     
@@ -23,7 +40,7 @@
 
         <div class="blocs-menu">
             <div class="cercle-portrait">
-                <img src="ressources/My_Anime_Picture2.png" alt="portrait img" >
+                <img src="ressources/cvphoto2.png" alt="portrait img" >
             </div>
         </div>
 
@@ -119,12 +136,12 @@
         <div class="fond-forme"></div>
 
         <div class="pres-gauche">
-            <h3> I am a software engineering student in my fifth year actively </h3>
+            <h3> Software Engineer Specializing in Full-Stack Development & Cloud Solutions </h3>
             <hr>
-            <p>I am seeking a challenging professional environment where I can apply my development skills, combining precision, analytical thinking, and expertise. </p>
+            <p>Innovative software engineer with expertise in designing and implementing scalable systems. Passionate about solving complex problems through clean, efficient code and modern architectures. </p>
             <br>
             <p>
-                I am a Full Stack Developer with experience in both front-end and back-end technologies.
+                Core competencies: System Design · Cloud Architecture · Full-Stack Development · DevOps · AI Integration
             </p>
         </div>
         
@@ -169,10 +186,19 @@
 
         <div class="item vague1">
             <div class="cont-img-port">
+                <img src="ressources/HRMS.png" alt="img Automated HR Management and Attendance Tracking system" id="HRMS">
+            </div>
+            <h3>HR & Attendance System</h3>
+            <p>Web & Mobile Application Development (React, Angular, Spring Boot).</p>
+            <a href="https://github.com/AnouarXperience/HRM---Final-Year-Project-Repository.git" target="_blank" class="btn-projets">Discover the project</a>
+        </div>
+
+        <div class="item vague1">
+            <div class="cont-img-port">
                 <img src="ressources/login page portability.png" alt="img portfolio" id="portability">
             </div>
             <h3>Number Portability</h3>
-            <p>Web Application Development (React and Spring boot).</p>
+            <p>Web Application Development (React, Spring boot).</p>
             <a href="https://github.com/AnouarXperience/NumberPortability.git" target="_blank" class="btn-projets">Discover the project</a>
         </div>
 
@@ -181,7 +207,7 @@
                 <img src="ressources/Unimarket.png" alt="img portfolio" id="Unimarket">
             </div>
             <h3>Multidomain Sales Platform</h3>
-            <p>Multi-Domain E-commerce Platform (Angular and Laravel)</p>
+            <p>Multi-Domain E-commerce Platform (Angular, Laravel)</p>
             <a  class="btn-projets" target="_blank" onclick="showAlert()">Discover the project</a>
         </div>
 
@@ -261,59 +287,112 @@
 
 
 </section>
-
-<!-- Section Range -->
-
+<!--------- Section Range -------------->
 <section class="section-range" id="range">
-
-    <h2 class="titre-exp">My skills</h2>
-
+    <h2 class="titre-exp">Technical Expertise</h2>
     <div class="grille-skill">
+      
+      <!-- System Design -->
+      <div class="range-cont">
+        <div class="skill-header">
+          <img src="ressources/icons/web-software-icon.svg" alt="System Design Icon" class="skill-icon">
+          <p class="label-skill">System Design &amp; Architecture</p>
+        </div>
+        <p class="number-skill">
+          Gained hands-on experience in system design while working on the 
+          <a href="#HRMS">HR &amp; Attendance System</a> and other projects. Focused on optimizing architecture for both web and mobile platforms.
+        </p>
+      </div>
 
+      <!-- Cloud Architecture -->
+      <div class="range-cont">
+        <div class="skill-header">
+          <img src="ressources/icons/cloud-computing-icon.svg" alt="Cloud Icon" class="skill-icon">
+          <p class="label-skill">Cloud Architecture (AWS/Azure)</p>
+        </div>
+        <p class="number-skill">
+          Worked with cloud services (AWS) during my internship at SWIFTECH for hosting and deploying the 
+          <a href="#HRMS">HR &amp; Attendance System</a>.
+        </p>
+      </div>
 
-        <div class="range-cont">
-            <p class="label-skill">JavaScript</p>
-            <p class="number-skill">75%</p>
-            <div class="barre-skill b1"></div>
-            <div class="barre-grises"></div>
+      <!-- Angular Framework -->
+      <div class="range-cont">
+        <div class="skill-header">
+          <img src="ressources/icons/icons8-angularjs.svg" alt="Angular Icon" class="skill-icon">
+          <p class="label-skill">Angular Framework</p>
         </div>
-        <div class="range-cont">
-            <p class="label-skill">Reactjs</p>
-            <p class="number-skill">35%</p>
-            <div class="barre-skill b2"></div>
-            <div class="barre-grises"></div>
-        </div>
-        <div class="range-cont">
-            <p class="label-skill">Angular</p>
-            <p class="number-skill">30%</p>
-            <div class="barre-skill b3"></div>
-            <div class="barre-grises"></div>
-        </div>
+        <p class="number-skill">
+          Extensively used Angular to build the 
+          <a href="#Unimarket">Unimarket</a> e-commerce platform, focusing on front-end development and UI/UX optimization.
+        </p>
+      </div>
 
+      <!-- React.js -->
+      <div class="range-cont">
+        <div class="skill-header">
+          <img src="ressources/icons/icons8-react-js.svg" alt="React JS Icon" class="skill-icon">
+          <p class="label-skill">React.js (Web Development)</p>
+        </div>
+        <p class="number-skill">
+          Implemented React.js for several projects, including the 
+          <a href="#portability">Number Portability</a> web application, enhancing the user interface with dynamic features.
+        </p>
+      </div>
 
-        <div class="range-cont">
-            <p class="label-skill">Spring Boot</p>
-            <p class="number-skill">40%</p>
-            <div class="barre-skill b4"></div>
-            <div class="barre-grises"></div>
+      <!-- React Native -->
+      <div class="range-cont">
+        <div class="skill-header">
+          <img src="ressources/icons/icons8-react-native.svg" alt="React Native Icon" class="skill-icon">
+          <p class="label-skill">React Native (Mobile Development)</p>
         </div>
-        <div class="range-cont">
-            <p class="label-skill">python</p>
-            <p class="number-skill">60%</p>
-            <div class="barre-skill b5"></div>
-            <div class="barre-grises"></div>
-        </div>
-        <div class="range-cont">
-            <p class="label-skill">AI</p>
-            <p class="number-skill">80%</p>
-            <div class="barre-skill b6"></div>
-            <div class="barre-grises"></div>
-        </div>
+        <p class="number-skill">
+          Built a mobile application using React Native as part of the 
+          <a href="#HRMS">HR &amp; Attendance System</a>, integrating mobile-friendly features for on-the-go access.
+        </p>
+      </div>
 
+      <!-- Spring Boot -->
+      <div class="range-cont">
+        <div class="skill-header">
+          <img src="ressources/icons/spring-boot.svg" alt="Spring Boot Icon" class="skill-icon">
+          <p class="label-skill">Spring Boot</p>
+        </div>
+        <p class="number-skill">
+          Used Spring Boot for back-end development, specifically in the 
+          <a href="#HRMS">HR &amp; Attendance System</a> and 
+          <a href="#portability">Number Portability</a> projects.
+        </p>
+      </div>
+
+      <!-- CI/CD Pipelines -->
+      <div class="range-cont">
+        <div class="skill-header">
+          <img src="ressources/icons/ci-cd-svgrepo-com.svg" alt="CI/CD Icon" class="skill-icon">
+          <p class="label-skill">CI/CD Pipelines</p>
+        </div>
+        <p class="number-skill">
+          Implemented basic CI/CD pipelines in personal and internship projects like 
+          <a href="#portability">Number Portability</a>, using GitHub Actions and Jenkins for deployment.
+        </p>
+      </div>
+
+      <!-- Containerization -->
+      <div class="range-cont">
+        <div class="skill-header">
+          <img src="ressources/icons/icons8-docker.svg" alt="Docker Icon" class="skill-icon">
+          <p class="label-skill">Containerization (Docker)</p>
+        </div>
+        <p class="number-skill">
+          Worked with Docker during my internship at Terraform Tunisia, containerizing back-end services for the 
+          <a href="#Unimarket">Unimarket</a> project.
+        </p>
+      </div>
 
     </div>
+  </section>
 
-</section>
+
 
 <!-- Section Experiences -->
 
@@ -346,33 +425,40 @@
 
             <div class="bloc bloc1">
                 <div class="contenu-bloc">
-                    <p class="titre-section-bloc">Billcom Consulting, 2023</p>
-                    <p class="txt-section">Spearheaded web application development using React and Spring Boot in the <a href="#portability" class="no-underline">Number Portability</a> Project at Billcom Consulting. Contributed significantly to the success of the Number Portability Project through skilled web development and project improvement at Billcom Consulting.</p>
+                    <p class="titre-section-bloc">SWIFTECH · End-of-Studies Internship (Janv. 2024 - Juin 2024)</p>
+                    <p class="txt-section">Led the development of an <a href="#HRMS" class="no-underline">Automated HR Management and Attendance Tracking system</a> at SWIFTECH, using Angular, React, and Spring Boot for both web and mobile apps. Focused on optimizing user interfaces, improving HR processes, and ensuring application performance through integration and deployment.</p>
                 </div>
             </div>
 
             <div class="bloc bloc2">
                 <div class="contenu-bloc">
-                    <p class="titre-section-bloc">Terraform Tunisia, 2023</p>
-                    <p class="txt-section">Collaborated on implementing new features in <a href="#Unimarket" class="no-underline">Unimarket</a>, conducted testing, debugging, and contributed to both front-end and back-end development, gaining proficiency in Angular and Laravel.</p>
+                    <p class="titre-section-bloc">Billcom Consulting · Professional Internship (Aug 2023)</p>
+                    <p class="txt-section">Spearheaded web application development using React and Spring Boot in the <a href="#portability" class="no-underline">Number Portability</a> Project at Billcom Consulting. Contributed significantly to the success of the Number Portability Project through skilled web development and project improvement at Billcom Consulting.</p>
                 </div>
             </div>
 
             <div class="bloc bloc3">
                 <div class="contenu-bloc">
-                    <p class="titre-section-bloc">JPARTNERS TUNISIE SUARL, 2022</p>
+                    <p class="titre-section-bloc">Terraform Tunisia · End-of-Year Internship (Feb. 2023 - May 2023)</p>
+                    <p class="txt-section">Collaborated on implementing new features in <a href="#Unimarket" class="no-underline">Unimarket</a>, conducted testing, debugging, and contributed to both front-end and back-end development, gaining proficiency in Angular and Laravel.</p>
+                </div>
+            </div>
+
+            <div class="bloc bloc4">
+                <div class="contenu-bloc">
+                    <p class="titre-section-bloc">JPARTNERS TUNISIE SUARL · Initiation Internship (Jul. 2022 - Aug. 2022)</p>
                     <p class="txt-section">Participated in an introductory internship at JPARTNERS TUNISIE SUARL, focusing on innovative web solution design.
                         Internship at JPARTNERS TUNISIE SUARL involving the creation of innovative web solutions. 
                         Contributed to a collaborative and talented team environment.</p>
                 </div>
             </div>
 
-            <div class="bloc bloc4">
+            <!-- <div class="bloc bloc5">
                 <div class="contenu-bloc">
                     <p class="titre-section-bloc">Sousse Production Center (STEG), 2020</p>
                     <p class="txt-section">Contributed significantly to Sousse Production Centre (STEG) in 2020, concentrating on the Internet of Things (IoT). Spearheaded the refurbishment of a project through Tia Portal programming, integrating Siemens API (Automated Programmable Logic Controllers).</p>
                 </div>
-            </div>
+            </div> -->
 
 
         </div>
@@ -384,43 +470,57 @@
 <!-- Section Parallax -->
 
 <div class="section-parallax">
-    <div class="txt-par animate"><p>Passionate about creating innovative solutions</p></div>
-    <div class="txt-par animate"><p>Dedicated to delivering excellence in every project</p></div>
-    <div class="txt-par animate"><p>Committed to building lasting relationships with clients</p></div>
+    <div class="txt-par animate"><p>Passionate about crafting efficient and scalable software solutions</p></div>
+    <div class="txt-par animate"><p>Focused on building high-performance applications and systems</p></div>
+    <div class="txt-par animate"><p>Driven by innovation and problem-solving through clean code</p></div>
 </div>
 
 
 <!-- Section Contact -->
 
-<section class="section-contact" id="contact">
-
-    <h2><strong>Let's</strong> Get in Touch</h2>
-
-    <div class="container-form">
-
-        <form class="form-bloc">
-
-            <div class="form-groupe">
-                <label for="prenom">First Name</label>
-                <input type="text" required maxlength="16" id="prenom">
-            </div>
-            <div class="form-groupe">
-                <label for="nom">Last Name</label>
-                <input type="text" required maxlength="16" id="nom">
-            </div>
-            <div class="form-groupe">
-                <textarea id="txt" placeholder="Your message" required></textarea>
-            </div>
-
-            <div class="form-groupe">
-                <input type="submit" value="SEND" class="button-sub" formaction="mailto:anouarabdallah733@gmail.com">
-            </div>
-
-        </form>
-
+<!-- Modal HTML Structure -->
+<div id="response-msg" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <div id="msg-message"></div>
     </div>
-
-</section>
+  </div>
+  
+  <!-- Contact Form -->
+  <section class="section-contact" id="contact">
+    <h2><strong>Let's</strong> Get in Touch</h2>
+    <div class="container-form">
+      <form class="form-bloc" id="contact-form">
+        <div class="form-groupe">
+          <label for="prenom">First Name</label>
+          <input type="text" required maxlength="16" id="prenom" name="prenom">
+        </div>
+        <div class="form-groupe">
+          <label for="nom">Last Name</label>
+          <input type="text" required maxlength="16" id="nom" name="nom">
+        </div>
+        <div class="form-groupe">
+          <label for="email">Email</label>
+          <input type="email" required id="email" name="email">
+        </div>
+        <div class="form-groupe">
+          <textarea id="txt" name="message" placeholder="Your message" required></textarea>
+        </div>
+        <div class="form-groupe">
+          <input type="submit" value="SEND" class="button-sub">
+        </div>
+      </form>
+    </div>
+  </section>
+  
+  <!-- Loader (if you need) -->
+  <div id="loader-overlay" class="loader-overlay">
+    <div class="loader">
+      <img src="../ressources/personal-website-icon-logo-vector-illustration-portfolio_Business_Face.ico" alt="Loading Logo" id="fp">
+      <div class="loader-text">Sending, please wait...</div>
+    </div>
+  </div>
+  
 
 <footer>
     All Rights reserved &copy;
@@ -447,5 +547,6 @@
     <script src="asp.min.js"></script>
     <script src="core.js"></script>
     <script src="app.js"></script>
+    <script src="./script.js"></script>
 </body>
 </html>
